@@ -1,0 +1,337 @@
+		<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Homeowner Services Consultant | Moisture Control & Water Seepage</title>
+  <meta name="description" content="Independent homeowner consulting for structural concerns, moisture control, and water seepage issues—slab, crawlspace, or basement homes." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --text:#eaf0ff;
+      --muted:#b7c3e6;
+      --accent:#4da3ff;
+      --accent2:#52f3c5;
+      --line: rgba(255,255,255,.12);
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(77,163,255,.18), transparent 55%),
+        radial-gradient(1000px 700px at 90% 20%, rgba(82,243,197,.12), transparent 50%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0;
+    }
+    .brand{
+      display:flex; flex-direction:column;
+      gap:2px;
+    }
+    .brand strong{font-size:16px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .links{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+    .links a{
+      text-decoration:none; font-size:14px; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+    }
+    .links a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color:#061022; font-weight:700; text-decoration:none;
+      box-shadow: 0 10px 30px rgba(77,163,255,.18);
+      white-space:nowrap;
+      border:0;
+      cursor:pointer;
+    }
+    .hero{
+      margin-top:8px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      padding:34px 24px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:start;
+    }
+    h1{margin:0 0 10px; font-size:36px; line-height:1.12}
+    .sub{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .pills{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 18px}
+    .pill{
+      font-size:13px; color:var(--text);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .secondary{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color:var(--text); text-decoration:none; font-weight:600;
+    }
+    .secondary:hover{background:rgba(255,255,255,.06)}
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .card h3{margin:0 0 8px; font-size:15px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px}
+    section{padding:18px 0}
+    .section-title{font-size:22px; margin:0 0 10px}
+    .two{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+    }
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    li{margin:6px 0}
+    .steps{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+    }
+    .step strong{display:block; margin-bottom:6px}
+    .footer{
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      padding:18px 0 30px;
+      margin-top:10px;
+    }
+    form{display:grid; gap:10px}
+    input, textarea{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      padding:12px 12px;
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      font-size:14px;
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    input:focus, textarea:focus{border-color: rgba(77,163,255,.7)}
+    .small{font-size:12px; color:var(--muted)}
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:10px 12px; border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media (max-width: 860px){
+      .hero-inner{grid-template-columns:1fr}
+      .grid3, .steps, .two{grid-template-columns:1fr}
+      h1{font-size:30px}
+      .links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <strong>Homeowner Services Consultant</strong>
+        <span>Structural • Moisture Control • Water Seepage</span>
+      </div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#areas">Home Types</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="cta" href="tel:+1-555-555-5555">Call / Text</a>
+    </div>
+
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <h1>Clear answers for moisture, seepage, and structural concerns.</h1>
+          <p class="sub">
+            I help homeowners understand what’s really happening, what to fix first, and how to avoid expensive mistakes—
+            whether your home is on a <b>slab</b>, has a <b>crawlspace</b>, or a <b>basement</b>.
+          </p>
+
+          <div class="pills">
+            <span class="pill">Moisture control</span>
+            <span class="pill">Water seepage</span>
+            <span class="pill">Drainage & grading</span>
+            <span class="pill">Crawlspace / basement</span>
+            <span class="pill">Foundation symptoms</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="cta" href="#contact">Request a consult</a>
+            <a class="secondary" href="#services">See services</a>
+          </div>
+
+          <div style="margin-top:14px" class="badge">
+            ✅ Practical plan • Photos + notes • Prioritized recommendations
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Common issues I help with</h3>
+          <p>Tell me what you’re seeing—these are typical warning signs:</p>
+          <ul>
+            <li>Musty odor, high humidity, condensation</li>
+            <li>Standing water or damp areas after rain</li>
+            <li>Efflorescence (white powder) on basement walls</li>
+            <li>Cracks, sticking doors, uneven floors (symptoms)</li>
+            <li>Crawlspace moisture, sagging insulation, wood concerns</li>
+          </ul>
+          <p class="small" style="margin-top:10px">
+            Note: This site is for homeowner consulting and education. If you also perform repairs, adjust wording accordingly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section id="services">
+      <h2 class="section-title">Services</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Structural & Foundation Symptom Review</h3>
+          <p>
+            Walk-through of cracks, settlement symptoms, floor issues, and drainage factors—
+            with a practical explanation of what’s normal vs. what needs action.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Moisture Control Assessment</h3>
+          <p>
+            Identify moisture sources and pathways (air, soil, plumbing, exterior water),
+            then outline ventilation, sealing, and humidity-control steps that make sense.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Water Seepage & Drainage Strategy</h3>
+          <p>
+            Evaluate seepage patterns and rain events, gutters/downspouts, grading, and likely entry points.
+            Get a prioritized plan before paying for repairs.
+          </p>
+        </div>
+      </div>
+
+      <div class="two" style="margin-top:12px">
+        <div class="card">
+          <h3>Deliverables you’ll receive</h3>
+          <ul>
+            <li>Short written summary of findings (plain English)</li>
+            <li>Prioritized “Fix First / Fix Next / Monitor” list</li>
+            <li>Photo notes of problem areas</li>
+            <li>Questions to ask contractors (to prevent over-selling)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What I’m not</h3>
+          <ul>
+            <li>Not an engineer’s stamped report (when you need that, I’ll tell you)</li>
+            <li>Not a substitute for a licensed contractor’s scope of work</li>
+            <li>Not guesswork—I focus on visible evidence + practical steps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <h2 class="section-title">Home types</h2>
+      <div class="steps">
+        <div class="card step">
+          <strong>Slab Homes</strong>
+          <span class="small">Cracks, water intrusion near edges, grading and drainage patterns, plumbing indicators.</span>
+        </div>
+        <div class="card step">
+          <strong>Crawlspace Homes</strong>
+          <span class="small">Moisture and humidity control, vapor barrier concerns, ventilation, wood/insulation symptoms.</span>
+        </div>
+        <div class="card step">
+          <strong>Basement Homes</strong>
+          <span class="small">Seepage pathways, hydrostatic pressure indicators, wall symptoms, and exterior water management.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2 class="section-title">How it works</h2>
+      <div class="steps">
+        <div class="card step">
+          <strong>1) Quick call</strong>
+          <span class="small">You describe the issue + I ask a few focused questions.</span>
+        </div>
+        <div class="card step">
+          <strong>2) On-site consult</strong>
+          <span class="small">Walk-through, photos, measurements where helpful, and clear explanation.</span>
+        </div>
+        <div class="card step">
+          <strong>3) Clear plan</strong>
+          <span class="small">You get prioritized recommendations and what to do next.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="two">
+        <div class="card">
+          <h3>Call / Text</h3>
+          <p>
+            <a class="cta" href="tel:+1-555-555-5555">+1 (555) 555-555-5555</a>
+          </p>
+          <p style="margin-top:12px; color:var(--muted)">
+            Or email:
+            <a href="mailto:youremail@example.com">youremail@example.com</a>
+          </p>
+          <p class="small" style="margin-top:10px">
+            Tip: If you text, include your city + whether it’s slab, crawlspace, or basement.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Request a consult</h3>
+          <form action="https://formspree.io/f/yourformid" method="POST">
+            <input name="name" placeholder="Your name" required />
+            <input name="phone" placeholder="Phone" />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="home_type" placeholder="Home type (slab / crawlspace / basement)" />
+            <textarea name="message" placeholder="What’s going on? (symptoms, when it happens, any recent rain, etc.)" required></textarea>
+            <button class="cta" type="submit">Send</button>
+            <div class="small">By sending, you agree I may contact you by phone/email to discuss your request.</div>
+          </form>
+          <div class="small" style="margin-top:10px">
+            To make the form send to you, replace the Formspree link with your own (free).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Homeowner Services Consultant • Moisture Control • Water Seepage • Structural
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
